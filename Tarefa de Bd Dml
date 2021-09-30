@@ -1,0 +1,52 @@
+create database Empresa;
+	use Empresa;
+	create table funcionario(
+		codFunc integer PRIMARY KEY,
+		nome varchar(40),
+		depto char(2),
+		funcao varchar(20),
+		salario decimal(6,2));
+	show tables;
+	insert into funcionario values(1, "Carlos Macedo Cerri", 3, "vendedor", 1530);
+		select * from funcionario;
+	insert into funcionario values(2, "Henrique Souza Marcos", 2, "gerente", 3985.75);
+	insert into funcionario values(3, "Adriana Araujo da Silva", 3, "secretaria", 1200.50);	
+	insert into funcionario values(4, "Solange Aparecida Souza", 5, "supervisor", 1599.51);	
+	insert into funcionario values(5, "Marcelo Amorim Pacheco", 3, "analista", 2850.11);
+	insert into funcionario values(6, "Xelia Assis do Amaral", 2, "secretaria", 1200.50);
+	insert into funcionario values(7, "Wilson Campos Macedo", 3, "programador", 2050);
+	insert into funcionario values(8, "Augusto Aguiar Souza", 3, "programador", 2050);
+	insert into funcionario values(9, "Jessica Alves Toledo", 2, "supervisor", 2100);
+	insert into funcionario values(10, "Vitoria Cruz Almeida", 2, "analista", 2500);
+	insert into funcionario values(11, "Marcio Canuto dos Santos", 2, "programador", 1800);
+	insert into funcionario values(12, "Cristina Cachoeira Buzzi", 5, "supervisor", 1950);
+		select * from funcionario;
+		select nome from funcionario;
+		select salario from funcionario;
+	alter table funcionario drop column funcao;
+	alter table funcionario drop column salario;	
+	 select * from funcionario;
+	alter table funcionario add admissao date;
+	alter table funcionario add filhos smallint;
+	 select * from funcionario;
+	update funcionario set admissao="2010/05/25" where codFunc=1;
+	update funcionario set admissao="2009/07/01" where codFunc=2;
+	update funcionario set admissao="2010/07/10" where codFunc=3;
+	update funcionario set admissao="2006/12/08" where codFunc=4;
+	update funcionario set admissao="2005/06/06" where codFunc=5;
+	update funcionario set admissao="2009/01/10" where codFunc=6;
+	update funcionario set admissao="2012/11/07" where codFunc=7;
+	update funcionario set admissao="2010/05/26" where codFunc=8;
+	update funcionario set admissao="2006/07/05" where codFunc=9;
+	update funcionario set admissao="2006/05/23" where codFunc=10;
+	update funcionario set admissao="2008/07/29" where codFunc=11;
+	update funcionario set admissao="2011/07/14" where codFunc=12;
+		 select * from funcionario;
+	update funcionario set filhos=2 where codFunc=2;
+	update funcionario set filhos=1 where codFunc=3;
+	update funcionario set filhos=3 where codFunc=4;
+	update funcionario set filhos=1 where codFunc=6;
+	update funcionario set filhos=4 where codFunc=9;
+	update funcionario set filhos=1 where codFunc=10;
+	update funcionario set filhos=2 where codFunc=12;	
+
